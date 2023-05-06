@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nodeinfo</title>
+    <link rel="stylesheet" href="static/css/nodeinfo.css">
+  </head>
+  <body>
+  <div id="podlog-div">
+    <h1 id="podlog-title">pod日志信息</h1>
+    <table id="podlog-table" border="2">
+      {% for log in podlog %}
+      <tbody>
+      <tr>
+          <td>nodeid</td>
+          <td>{{log[0]}}</td>
+        </tr>
+      <tr>
+          <td>podname</td>
+          <td>{{log[1]}}</td>
+        </tr>
+      <tr>
+          <td>日志信息</td>
+          <td>{{log[2]}}</td>
+        </tr>
+      <tr>
+          <td>日志标识</td>
+          <td>{{log[3]}}</td>
+        </tr>
+      </tbody>
+      <br>
+      {% endfor %}
+    </table>
+  </div>
+  </body>
+</html>
+
